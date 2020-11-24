@@ -51,8 +51,8 @@ let quotes = [ // An Array containing 5 quote objects
  * `getRandomQuote` function
 ***/
 function getRandomQuote() { 
-  let randomNumber = Math.floor(Math.random() * quotes.length); // randomNumber variable generates a random number
-  let randomQute = quotes[randomNumber]; // randomQuote variable returns a random quote object using the random number variable
+  const randomNumber = Math.floor(Math.random() * quotes.length); // randomNumber variable generates a random number
+  const randomQute = quotes[randomNumber]; // randomQuote variable returns a random quote object using the random number variable
     return randomQute; // random quote object is logged
 }
 
@@ -61,10 +61,10 @@ function getRandomQuote() {
  ***/
 //This function generates three random values for the "rgb" variable
  function randomColour() {
-  let red = Math.floor(Math.random() * 255)
-  let green = Math.floor(Math.random() * 255)
-  let blue = Math.floor(Math.random() * 255)
-  let rgb = `rgb(${red},${green},${blue})`
+  const red = Math.floor(Math.random() * 255)
+  const green = Math.floor(Math.random() * 255)
+  const blue = Math.floor(Math.random() * 255)
+  const rgb = `rgb(${red},${green},${blue})`
 
     return document.body.style.background = rgb; /*** code adapted from 
     https://stackoverflow.com/questions/21615441/using-javascript-to-change-rgb-value-of-background-onclick
@@ -77,9 +77,9 @@ function getRandomQuote() {
 ***/
 
 // The interval was set to 4 sec. a new quote will print every 4 sec.
-setInterval(function printQuote() {
-  let randomQuoteObject = getRandomQuote();
-  let randomBackGRoundColor = randomColour();
+function printQuote() {
+  const randomQuoteObject = getRandomQuote();
+  const randomBackGRoundColor = randomColour();
 // The stringHtml variable allows for multiple template literals to be joined 
   let stringHtml = ` 
   <p class="quote"> ${randomQuoteObject.quote} </p>
@@ -101,7 +101,9 @@ setInterval(function printQuote() {
   stringHtml += `</p>`; 
 
     return document.getElementById('quote-box').innerHTML = stringHtml; 
-  }, 10000);
+  };
+
+setInterval(printQuote, 8000);
 
 
 
