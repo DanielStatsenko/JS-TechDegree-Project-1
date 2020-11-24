@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
-let quotes = [ // An Array containing 5 quote objects 
+const quotes = [ // An Array containing 5 quote objects 
   {
     quote: 'We are what we pretend to be, so we must be careful about what we pretend to be.',
     source: 'Kurt Vonnegut',
