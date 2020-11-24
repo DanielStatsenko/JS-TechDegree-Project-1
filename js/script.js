@@ -103,7 +103,7 @@ function printQuote() {
     return document.getElementById('quote-box').innerHTML = stringHtml; 
   };
 
-setInterval(printQuote, 8000);
+setInterval(printQuote, 6000);
 
 
 
