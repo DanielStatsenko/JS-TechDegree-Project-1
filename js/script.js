@@ -101,7 +101,7 @@ setInterval(function printQuote() {
   stringHtml += `</p>`; 
 
     return document.getElementById('quote-box').innerHTML = stringHtml; 
-  }, 4000);
+  }, 10000);
 
 
 
