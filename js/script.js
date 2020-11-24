@@ -27,7 +27,6 @@ let quotes = [
     quote: "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart.",
     source: 'Roy T. Bennett',
     citation: 'The Light in the Heart',
-    year: 2016
   },
   {
     quote: 'Instead of worrying about what you cannot control, shift your energy to what you can create.',
@@ -47,8 +46,13 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
+function getRandomQuote() {
+  let randomNumber = Math.floor(Math.random() * 5);
 
+  return randomNumber;
+}
 
+console.log(getRandomQuote());
 
 /***
  * `printQuote` function
